@@ -14,6 +14,7 @@ namespace Methods.VContainerEnqueueParent
         {
             base.Configure(builder);
 
+            // 別のモードのときにエラーがでないための処理
             if (config.ProvideType != ProvideType.VContainer_EnqueueParent)
             {
                 builder.Register<ScoreHolderEnqueueParent>(Lifetime.Singleton);
